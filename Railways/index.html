@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Railways Game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="menu-box text-center p-4" id="menu-section">
+            <input type="text" class="form-control mb-3 player-name-input" placeholder="WHO ARE YOU?" id="player-name">
+            <div class="difficulty-section mb-4">
+                <p>SET THE DIFFICULTY!</p>
+                <div class="button-container">
+                    <button class="btn difficulty-btn mx-2" data-difficulty="easy">5 x 5 <br> EASY</button>
+                    <button class="btn difficulty-btn mx-2" data-difficulty="hard">7 x 7 <br> HARD</button>
+                </div>
+            </div>
+            <div class="button-section">
+                <div class="button-container">
+                    <button class="btn btn-light menu-btn" id="rules-btn">RULES</button>
+                    <button class="btn btn-primary menu-btn" id="start-game-btn">START GAME</button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="game-section d-none" id="game-section">
+        <div class="player-info-container" id="playerinf">
+            <span id="player-display"></span>
+            <hr id="line">
+            <span id="timer-display">Time: 00:00</span>
+        </div>
+
+        <div>
+            <button id="back-btn">Back to menu</button>
+        </div>
+
+        <div id="leaderboard-section">
+            <h3>Leaderboard</h3>
+            <div id="easy-leaderboard">
+                <h4>Easy</h4>
+                <ul id="easy-leaderboard-list"></ul>
+            </div>
+            <div id="hard-leaderboard">
+                <h4>Hard</h4>
+                <ul id="hard-leaderboard-list"></ul>
+            </div>
+        </div>
+
+        <div class="game-board" id="game-board"></div>
+        
+    </div>
+    
+    <div class="custom-modal" id="rules-modal">
+        <div class="custom-modal-content">
+            <div class="custom-modal-header">
+                <h5 class="modal-title">Game Rules</h5>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="custom-modal-body">
+                <p>1. Connect tracks correctly.</p>
+                <p>2. Complete within the time limit.</p>
+                <p>3. Select difficulty and start game to begin.</p>
+            </div>
+        </div>
+    </div> 
+    <script src="index.js"></script>
+</body>
+</html>
